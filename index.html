@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Garments Industry</title>
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f8fb;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background: url(10.jpg) center/cover no-repeat;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%; width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    header .content {
+      position: relative;
+      z-index: 2;
+    }
+
+    header h1 {
+      font-size: 44px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 15px auto;
+    }
+
+    .cta-button {
+      margin-top: 30px;
+      display: inline-block;
+      padding: 14px 32px;
+      font-size: 18px;
+      background-color: #1abc9c;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #16a085;
+      transform: scale(1.05);
+    }
+
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .feature-card {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-card h3 {
+      color: #2c3e50;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    .feature-card p {
+      font-size: 15px;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #ecf0f1;
+      font-size: 14px;
+      color: #555;
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 30px;
+      }
+
+      .cta-button {
+        font-size: 16px;
+        padding: 12px 24px;
+      }
+    }
+    .auth-buttons .btn {
+      background-color: #1abc9c;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+
+    .auth-buttons .btn:hover {
+      background-color: #16a085;
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      font-size: 30px;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .content-section {
+      padding: 50px 20px;
+    }
+
+    .info-block {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      margin-bottom: 50px;
+      flex-wrap: wrap;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .info-block img {
+      width: 100%;
+      max-width: 400px;
+      object-fit: cover;
+      border-radius: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .info-block img:hover {
+      transform: scale(1.05);
+    }
+
+    .info-text {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .info-block h2 {
+      margin-bottom: 15px;
+      font-size: 24px;
+      color: #2c3e50;
+    }
+
+    .info-block p {
+      font-size: 16px;
+    }
+
+    .cta {
+      text-align: center;
+      background: #ffffff;
+      padding: 60px 20px;
+      box-shadow: inset 0 0 100px #ecf0f1;
+    }
+
+    .hover-button {
+      padding: 14px 32px;
+      background-color: #1abc9c;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .hover-button:hover {
+      background-color: #16a085;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="content">
+      <h1>👕 Welcome to Garments Industry</h1>
+      <p>Leading innovation in fashion, manufacturing and global textile exports. Discover premium garments, quality materials, and cutting-edge processes.</p>
+      <button class="cta-button" onclick="navigateTo('product.html')">Explore product</button>
+      <button class="cta-button" onclick="accessoriesRedirect()">Explore Accessories</button>
+    </div>
+  </header>
+
+  <section class="section" id="features">
+    <h2>Why Choose Us?</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>World-Class Quality</h3>
+        <p>Unmatched standards in every stage of garment production — from fabric to final stitch.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Global Exports</h3>
+        <p>Trusted by top fashion brands worldwide. Efficient logistics & bulk shipping available.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Accessories Hub</h3>
+        <p>Complete range of zippers, buttons, labels & threads — all in one place.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Eco-friendly Manufacturing</h3>
+        <p>Sustainable production methods with minimal waste and eco-certified processes.</p>
+      </div>
+    </div>
+  </section>
+   <div class="auth-buttons">
+     
+    </div>
+  </header>
+
+  <section class="content-section">
+    <div class="info-block">
+      <img src="download.jpeg"Company">
+      <div class="info-text">
+        <h2>About the Industry</h2>
+        <p>
+          The garment industry in India is a large and diverse sector, encompassing everything from raw material production to the export of ready-made garments. It generates significant revenue and employment and is driven by both large corporations and small manufacturers.
+        </p>
+      </div>
+    </div>
+
+    <div class="info-block">
+      <img src="ORDERS.jpeg" alt="Orders">
+      <div class="info-text">
+        <h2>Order System</h2>
+        <p>
+          A Purchase Order (PO) is a legal document between a buyer and a garment manufacturer. It includes garment style, quantity, delivery, pricing, and payment details.
+        </p>
+      </div>
+    </div>
+
+    <div class="info-block">
+      <img src="images.jpeg" alt="Manufacturing">
+      <div class="info-text">
+        <h2>Manufacturing Process</h2>
+        <p>
+          From design and pattern making to quality checks and packaging, the manufacturing process ensures efficient production of high-quality garments. It involves specialized steps including grading, cutting, sewing, finishing, and final delivery.
+        </p>
+      </div>
+    </div>
+
+    <div class="info-block">
+      <img src="download (2).jpeg" alt="Final Product">
+      <div class="info-text">
+        <h2>Final Product & Exports</h2>
+        <p>
+          India’s garment exports are a major part of the global textile supply chain. With a vast variety of styles, materials, and techniques, Indian garments hold a unique place in international markets.
+        </p>
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <footer>
+    &copy; <span id="year"></span> Garments Industry. All rights reserved.
+  </footer>
+
+  <script>
+   document.getElementById('year').textContent = new Date().getFullYear();
+
+    
+    function navigateTo(page) {
+      window.location.href = page;
+    }
+
+   
+    function accessoriesRedirect() {
+      if (confirm("Do you want to explore accessories?")) {
+        window.location.href = "new.html";
+      }
+    }
+
+    
+  </script>
+
+</body>
+</html>
